@@ -1,8 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h1 {
-    color: blue;
-  }
-  
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: blue;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size:200%;
+  margin: 10px 0;
+}

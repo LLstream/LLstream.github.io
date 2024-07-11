@@ -1,6 +1,6 @@
 "use strict";
-document.addEventListener("DOMContentLoaded", function () {
-    var heading = document.createElement("h1");
+document.addEventListener("DOMContentLoaded", () => {
+    const heading = document.createElement("h1");
     heading.textContent = "Page 1";
     document.body.appendChild(heading);
 });

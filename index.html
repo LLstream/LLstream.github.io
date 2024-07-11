@@ -3,34 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My TypeScript Blog</title>
+    <title>My Blog</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;  /* カードを中心に配置 */
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 32px);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 32px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- ヘッダー -->
     <header>
-        <a href="index.html">
-            <h1>My Blog</h1>
-        </a>
+        <h1><a href="/" style="text-decoration: none; color: inherit;">My Blog</a></h1>
     </header>
+
     <main>
-        <section class="card-container">
-            <a href="blog/page1.html" class="card">
-                <div class="card-content">
-                    <h2>Page 1</h2>
-                    <p>This is the content of Page 1.</p>
-                </div>
-            </a>
-            <a href="blog/page2.html" class="card">
-                <div class="card-content">
-                    <h2>Page 2</h2>
-                    <p>This is the content of Page 2.</p>
-                </div>
-            </a>
-        </section>
+        <div class="container">
+            <div class="card" onclick="location.href='public/blog/page1.html'">
+                <h2>Page 1</h2>
+                <p>Click to read Page 1</p>
+            </div>
+            <div class="card" onclick="location.href='public/blog/page2.html'">
+                <h2>Page 2</h2>
+                <p>Click to read Page 2</p>
+            </div>
+        </div>
     </main>
+
+    <!-- フッター -->
     <footer>
-        <p>&copy; 2024 My Blog</p>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
     </footer>
-    <script src="dist/index.js"></script>
 </body>
 </html>

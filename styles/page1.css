@@ -1,7 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-}
+@import url('style.css');
 
-h1 {
+article h2 {
     color: green;
 }

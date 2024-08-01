@@ -61,6 +61,28 @@ footer {
   bottom: 0;
 }
 
+main {
+  max-width: 800px; /* 最大幅を800pxに設定 */
+  margin: 20px auto; /* 上下に20px、左右に自動でマージンを設定し中央に配置 */
+  padding: 0 20px; /* 内側に20pxのパディングを設定 */
+}
+
+.article {
+  padding: 20px;
+  background: #fff; /* 背景色は白 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* シャドウを追加 */
+  border-radius: 10px; /* 角を丸くする */
+}
+
+/* タグと見出しに適用する追加のスタイル */
+.tags {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333; /* 見出しの色 */
+}
+
 /* メディアクエリ */
 @media (max-width: 1200px) {
   .card {
